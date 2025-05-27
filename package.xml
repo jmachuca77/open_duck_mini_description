@@ -11,11 +11,16 @@
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>urdf</depend>
-  <depend>robot_state_publisher</depend>
-  <depend>joint_state_publisher</depend>
+  <!-- <depend>robot_state_publisher</depend> -->
   <depend>rviz2</depend>
+
+  <!-- your Python node’s runtime deps -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>mini_bdx_runtime</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
   </export>
+
 </package>
