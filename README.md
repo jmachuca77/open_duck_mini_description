@@ -1,4 +1,4 @@
-# mini_bdx_description
+# open_duck_mini_description
 
 Robot description and state‐publisher package for the mini_bdx platform.  
 This “single‐package” contains your URDF, meshes, launch files, custom publishers, and a custom message type.
@@ -6,7 +6,7 @@ This “single‐package” contains your URDF, meshes, launch files, custom pub
 ## Package Structure
 
 ```text
-mini_bdx_description/
+open_duck_mini_description/
 ├── CMakeLists.txt
 ├── package.xml
 ├── msg/
@@ -83,14 +83,14 @@ pip install empy lark-parser PyYAML
 From your workspace root:
 
 ```bash
-colcon build --packages-select mini_bdx_description
+colcon build --packages-select open_duck_mini_description
 source install/setup.bash
 ```
 
 ## Launch & Run
 
 ```bash
-ros2 launch mini_bdx_description display.launch.py
+ros2 launch open_duck_mini_description display.launch.py
 ```
 
 ### Launch arguments
@@ -110,7 +110,7 @@ ros2 launch mini_bdx_description display.launch.py
 #### Example: RViz + GUI, built-in JSP
 
 ```bash
-ros2 launch mini_bdx_description display.launch.py \
+ros2 launch open_duck_mini_description display.launch.py \
   use_hw_jsp:=false \
   enable_rviz:=true \
   enable_jsp_gui:=true
@@ -121,7 +121,7 @@ ros2 launch mini_bdx_description display.launch.py \
 - **`/joint_states`** (`sensor_msgs/msg/JointState`)  
   From your HWI hardware node or built-in publisher.
 
-- **`/feet_switch`** (`mini_bdx_description/msg/FeetState`)  
+- **`/feet_switch`** (`open_duck_mini_description/msg/FeetState`)  
   Custom message containing header + two booleans (`left_contact`, `right_contact`).
 
 - **IMU topics** from `bno055` driver:
