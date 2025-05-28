@@ -12,15 +12,14 @@ from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 from launch_ros.actions import Node
 
+
 def generate_launch_description():
-    # 1) New launch argument: choose hardware vs built-in JSP
+    # 1) Declare launch arguments
     declare_use_hw_jsp = DeclareLaunchArgument(
         'use_hw_jsp',
         default_value='true',
         description='Use hardware joint_state_publisher instead of the default one'
     )
-
-    # reuse existing args
     declare_enable_rviz = DeclareLaunchArgument(
         'enable_rviz', default_value='false', description='Enable RViz2'
     )
@@ -70,7 +69,28 @@ def generate_launch_description():
         condition=IfCondition(use_hw_jsp)
     )
 
-    # 7) Optional GUI slider
+    # 7) BNO055 IMU node (always)
+    bno_config = os.path.join(
+        get_package_share_directory('open_duck_mini_description'),
+        'config', 'bno055_params_i2c.yaml'
+    )
+    bno_node = Node(
+        package='bno055',
+        executable='bno055',
+        name='bno055',
+        output='screen',
+        parameters=[bno_config]
+    )
+
+    # 8) Feet switch node (always)
+    feet_switch = Node(
+        package='open_duck_mini_description',
+        executable='feet_switch_node.py',
+        name='feet_switch_node',
+        output='screen'
+    )
+
+    # 9) Optional GUI slider
     jsp_gui = Node(
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
@@ -79,7 +99,7 @@ def generate_launch_description():
         condition=IfCondition(enable_jsp_gui)
     )
 
-    # 8) Optional RViz
+    # 10) Optional RViz
     rviz = Node(
         package='rviz2',
         executable='rviz2',
@@ -88,7 +108,7 @@ def generate_launch_description():
         condition=IfCondition(enable_rviz)
     )
 
-    # 9) Optional Foxglove Bridge
+    # 11) Optional Foxglove Bridge
     foxglove_bridge = IncludeLaunchDescription(
         XMLLaunchDescriptionSource(os.path.join(
             get_package_share_directory('foxglove_bridge'),
@@ -106,6 +126,8 @@ def generate_launch_description():
         jsp,
         rsp,
         hw_jsp,
+        bno_node,
+        feet_switch,
         jsp_gui,
         rviz,
         foxglove_bridge,
