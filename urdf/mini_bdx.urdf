@@ -22,7 +22,7 @@
     <visual>
       <origin xyz="0.00675936 0.00148713 0.00422528" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/fake_antenna.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/fake_antenna.stl"/>
       </geometry>
       <material name="fake_antenna_material">
         <color rgba="0.611765 0.619608 0.627451 1.0"/>
@@ -31,14 +31,14 @@
     <collision>
       <origin xyz="0.00675936 0.00148713 0.00422528" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/fake_antenna.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/fake_antenna.stl"/>
       </geometry>
     </collision>
     <!-- Part front_panel_v4 -->
     <visual>
       <origin xyz="6.91563e-16 1.32142e-12 -4.10429e-08" rpy="2.02937e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/front_panel_v4.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/front_panel_v4.stl"/>
       </geometry>
       <material name="front_panel_v4_material">
         <color rgba="1 1 1 1.0"/>
@@ -47,14 +47,14 @@
     <collision>
       <origin xyz="6.91563e-16 1.32142e-12 -4.10429e-08" rpy="2.02937e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/front_panel_v4.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/front_panel_v4.stl"/>
       </geometry>
     </collision>
     <!-- Part e_stop_adapter_plate -->
     <visual>
       <origin xyz="7.05441e-16 4.27923e-16 -4.10396e-08" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/e_stop_adapter_plate.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/e_stop_adapter_plate.stl"/>
       </geometry>
       <material name="e_stop_adapter_plate_material">
         <color rgba="1 1 1 1.0"/>
@@ -63,14 +63,14 @@
     <collision>
       <origin xyz="7.05441e-16 4.27923e-16 -4.10396e-08" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/e_stop_adapter_plate.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/e_stop_adapter_plate.stl"/>
       </geometry>
     </collision>
     <!-- Part front_cover -->
     <visual>
       <origin xyz="0.000284514 1.32144e-12 -4.10429e-08" rpy="2.36244e-15 -1.15513e-14 2.62734e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/front_cover.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/front_cover.stl"/>
       </geometry>
       <material name="front_cover_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -79,14 +79,14 @@
     <collision>
       <origin xyz="0.000284514 1.32144e-12 -4.10429e-08" rpy="2.36244e-15 -1.15513e-14 2.62734e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/front_cover.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/front_cover.stl"/>
       </geometry>
     </collision>
     <!-- Part front_greeble -->
     <visual>
       <origin xyz="0.000284514 1.32144e-12 -4.10429e-08" rpy="2.36244e-15 -1.15513e-14 2.62734e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/front_greeble.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/front_greeble.stl"/>
       </geometry>
       <material name="front_greeble_material">
         <color rgba="0.627451 0.627451 0.627451 1.0"/>
@@ -95,14 +95,14 @@
     <collision>
       <origin xyz="0.000284514 1.32144e-12 -4.10429e-08" rpy="2.36244e-15 -1.15513e-14 2.62734e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/front_greeble.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/front_greeble.stl"/>
       </geometry>
     </collision>
     <!-- Part e_stop_panel -->
     <visual>
       <origin xyz="7.05441e-16 4.27923e-16 -4.10396e-08" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/e_stop_panel.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/e_stop_panel.stl"/>
       </geometry>
       <material name="e_stop_panel_material">
         <color rgba="1 1 1 1.0"/>
@@ -111,14 +111,14 @@
     <collision>
       <origin xyz="7.05441e-16 4.27923e-16 -4.10396e-08" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/e_stop_panel.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/e_stop_panel.stl"/>
       </geometry>
     </collision>
     <!-- Part power_switch -->
     <visual>
       <origin xyz="-0.157308 2.5484e-08 0.0595894" rpy="2.53967e-15 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/power_switch.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/power_switch.stl"/>
       </geometry>
       <material name="power_switch_material">
         <color rgba="0.901961 0.901961 0.901961 1.0"/>
@@ -127,14 +127,14 @@
     <collision>
       <origin xyz="-0.157308 2.5484e-08 0.0595894" rpy="2.53967e-15 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/power_switch.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/power_switch.stl"/>
       </geometry>
     </collision>
     <!-- Part back_panel -->
     <visual>
       <origin xyz="6.89828e-16 4.29657e-16 -4.10396e-08" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/back_panel.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/back_panel.stl"/>
       </geometry>
       <material name="back_panel_material">
         <color rgba="1 1 1 1.0"/>
@@ -143,14 +143,14 @@
     <collision>
       <origin xyz="6.89828e-16 4.29657e-16 -4.10396e-08" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/back_panel.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/back_panel.stl"/>
       </geometry>
     </collision>
     <!-- Part trunk_bottom -->
     <visual>
       <origin xyz="6.93285e-16 4.28849e-16 3.76132e-13" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/trunk_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/trunk_bottom.stl"/>
       </geometry>
       <material name="trunk_bottom_material">
         <color rgba="0.180392 0.180392 0.180392 1.0"/>
@@ -159,14 +159,14 @@
     <collision>
       <origin xyz="6.93285e-16 4.28849e-16 3.76132e-13" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/trunk_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/trunk_bottom.stl"/>
       </geometry>
     </collision>
     <!-- Part trunk_top_back -->
     <visual>
       <origin xyz="6.91563e-16 4.29657e-16 3.76131e-13" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/trunk_top_back.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/trunk_top_back.stl"/>
       </geometry>
       <material name="trunk_top_back_material">
         <color rgba="0.180392 0.180392 0.180392 1.0"/>
@@ -175,14 +175,14 @@
     <collision>
       <origin xyz="6.91563e-16 4.29657e-16 3.76131e-13" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/trunk_top_back.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/trunk_top_back.stl"/>
       </geometry>
     </collision>
     <!-- Part bno055 -->
     <visual>
       <origin xyz="-0.08692 0.00079 0.0417909" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/bno055.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/bno055.stl"/>
       </geometry>
       <material name="bno055_material">
         <color rgba="0.615686 0.811765 0.929412 1.0"/>
@@ -191,14 +191,14 @@
     <collision>
       <origin xyz="-0.08692 0.00079 0.0417909" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/bno055.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/bno055.stl"/>
       </geometry>
     </collision>
     <!-- Part roll_bearing -->
     <visual>
       <origin xyz="-0.019 2.36075e-16 0.0648909" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_bearing.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_bearing.stl"/>
       </geometry>
       <material name="roll_bearing_material">
         <color rgba="0.6 0.6 0.6 1.0"/>
@@ -207,14 +207,14 @@
     <collision>
       <origin xyz="-0.019 2.36075e-16 0.0648909" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_bearing.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_bearing.stl"/>
       </geometry>
     </collision>
     <!-- Part trunk_top_front -->
     <visual>
       <origin xyz="6.93285e-16 4.28849e-16 3.76132e-13" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/trunk_top_front.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/trunk_top_front.stl"/>
       </geometry>
       <material name="trunk_top_front_material">
         <color rgba="0.180392 0.180392 0.180392 1.0"/>
@@ -223,14 +223,14 @@
     <collision>
       <origin xyz="6.93285e-16 4.28849e-16 3.76132e-13" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/trunk_top_front.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/trunk_top_front.stl"/>
       </geometry>
     </collision>
     <!-- Part rpi_zero_bridge_top -->
     <visual>
       <origin xyz="0.003 4.42743e-16 3.7616e-13" rpy="2.36244e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/rpi_zero_bridge_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/rpi_zero_bridge_top.stl"/>
       </geometry>
       <material name="rpi_zero_bridge_top_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -239,14 +239,14 @@
     <collision>
       <origin xyz="0.003 4.42743e-16 3.7616e-13" rpy="2.36244e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/rpi_zero_bridge_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/rpi_zero_bridge_top.stl"/>
       </geometry>
     </collision>
     <!-- Part rpi_zero_bridge_bottom -->
     <visual>
       <origin xyz="0.003 4.39274e-16 3.76162e-13" rpy="2.36244e-15 -1.15513e-14 2.62734e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/rpi_zero_bridge_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/rpi_zero_bridge_bottom.stl"/>
       </geometry>
       <material name="rpi_zero_bridge_bottom_material">
         <color rgba="0.501961 0.501961 0.501961 1.0"/>
@@ -255,14 +255,14 @@
     <collision>
       <origin xyz="0.003 4.39274e-16 3.76162e-13" rpy="2.36244e-15 -1.15513e-14 2.62734e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/rpi_zero_bridge_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/rpi_zero_bridge_bottom.stl"/>
       </geometry>
     </collision>
     <!-- Part board -->
     <visual>
       <origin xyz="-0.06349 0.0165 0.0603909" rpy="-2.22182e-15 1.11561e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/board.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/board.stl"/>
       </geometry>
       <material name="board_material">
         <color rgba="0 0.501961 0 1.0"/>
@@ -271,14 +271,14 @@
     <collision>
       <origin xyz="-0.06349 0.0165 0.0603909" rpy="-2.22182e-15 1.11561e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/board.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/board.stl"/>
       </geometry>
     </collision>
     <!-- Part rpi_and_5v_reg_mount -->
     <visual>
       <origin xyz="6.93285e-16 4.34861e-16 3.76129e-13" rpy="2.36244e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/rpi_and_5v_reg_mount.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/rpi_and_5v_reg_mount.stl"/>
       </geometry>
       <material name="rpi_and_5v_reg_mount_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -287,14 +287,14 @@
     <collision>
       <origin xyz="6.93285e-16 4.34861e-16 3.76129e-13" rpy="2.36244e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/rpi_and_5v_reg_mount.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/rpi_and_5v_reg_mount.stl"/>
       </geometry>
     </collision>
     <!-- Part roll_bearing_2 -->
     <visual>
       <origin xyz="-0.019 -0.07 0.0648909" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_bearing.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_bearing.stl"/>
       </geometry>
       <material name="roll_bearing_2_material">
         <color rgba="0.6 0.6 0.6 1.0"/>
@@ -303,14 +303,14 @@
     <collision>
       <origin xyz="-0.019 -0.07 0.0648909" rpy="2.06672e-15 -1.15513e-14 2.53967e-15"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_bearing.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_bearing.stl"/>
       </geometry>
     </collision>
     <!-- Part cell -->
     <visual>
       <origin xyz="-0.120984 -0.010299 0.0793134" rpy="-3.14159 7.17506e-17 2.19131"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/cell.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/cell.stl"/>
       </geometry>
       <material name="cell_material">
         <color rgba="0.615686 0.811765 0.929412 1.0"/>
@@ -319,14 +319,14 @@
     <collision>
       <origin xyz="-0.120984 -0.010299 0.0793134" rpy="-3.14159 7.17506e-17 2.19131"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/cell.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/cell.stl"/>
       </geometry>
     </collision>
     <!-- Part holder -->
     <visual>
       <origin xyz="-0.130984 -0.0633235 0.0457549" rpy="-2.53967e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/holder.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/holder.stl"/>
       </geometry>
       <material name="holder_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -335,14 +335,14 @@
     <collision>
       <origin xyz="-0.130984 -0.0633235 0.0457549" rpy="-2.53967e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/holder.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/holder.stl"/>
       </geometry>
     </collision>
     <!-- Part cell_2 -->
     <visual>
       <origin xyz="-0.120984 0.010701 0.0143134" rpy="-1.27503e-14 -2.0017e-14 0.750265"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/cell.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/cell.stl"/>
       </geometry>
       <material name="cell_2_material">
         <color rgba="0.615686 0.811765 0.929412 1.0"/>
@@ -351,14 +351,14 @@
     <collision>
       <origin xyz="-0.120984 0.010701 0.0143134" rpy="-1.27503e-14 -2.0017e-14 0.750265"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/cell.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/cell.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56 -->
     <visual>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -367,14 +367,14 @@
     <collision>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier -->
     <visual>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -383,14 +383,14 @@
     <collision>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45 -->
     <visual>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -399,14 +399,14 @@
     <collision>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95 -->
     <visual>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -415,14 +415,14 @@
     <collision>
       <origin xyz="0.001 0.0097 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier -->
     <visual>
       <origin xyz="0.001 0.0126 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -431,14 +431,14 @@
     <collision>
       <origin xyz="0.001 0.0126 0.0645009" rpy="-2.62734e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_2 -->
     <visual>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_2_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -447,14 +447,14 @@
     <collision>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_2 -->
     <visual>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_2_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -463,14 +463,14 @@
     <collision>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_2 -->
     <visual>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_2_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -479,14 +479,14 @@
     <collision>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_2 -->
     <visual>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_2_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -495,14 +495,14 @@
     <collision>
       <origin xyz="-0.0445 -0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_2 -->
     <visual>
       <origin xyz="-0.0445 -0.035 0.0522909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_2_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -511,14 +511,14 @@
     <collision>
       <origin xyz="-0.0445 -0.035 0.0522909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_3 -->
     <visual>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_3_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -527,14 +527,14 @@
     <collision>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_3 -->
     <visual>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_3_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -543,14 +543,14 @@
     <collision>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_3 -->
     <visual>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_3_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -559,14 +559,14 @@
     <collision>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_3 -->
     <visual>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_3_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -575,14 +575,14 @@
     <collision>
       <origin xyz="-0.0445 0.035 0.0551909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_3 -->
     <visual>
       <origin xyz="-0.0445 0.035 0.0522909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_3_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -591,7 +591,7 @@
     <collision>
       <origin xyz="-0.0445 0.035 0.0522909" rpy="-1.5708 1.15513e-14 -3.14159"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -621,7 +621,7 @@
     <visual>
       <origin xyz="-3.29597e-16 -0.035 0.01905" rpy="-8.76998e-16 7.09142e-16 -5.55112e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_bottom.stl"/>
       </geometry>
       <material name="roll_motor_bottom_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -630,14 +630,14 @@
     <collision>
       <origin xyz="-3.29597e-16 -0.035 0.01905" rpy="-8.76998e-16 7.09142e-16 -5.55112e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_bottom.stl"/>
       </geometry>
     </collision>
     <!-- Part roll_motor_top -->
     <visual>
       <origin xyz="3.46945e-18 -0.035 0.01905" rpy="-1.18789e-31 2.48714e-31 6.36021e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_top.stl"/>
       </geometry>
       <material name="roll_motor_top_material">
         <color rgba="0.901961 0.901961 0.901961 1.0"/>
@@ -646,14 +646,14 @@
     <collision>
       <origin xyz="3.46945e-18 -0.035 0.01905" rpy="-1.18789e-31 2.48714e-31 6.36021e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_top.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_4 -->
     <visual>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_4_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -662,14 +662,14 @@
     <collision>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_4 -->
     <visual>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_4_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -678,14 +678,14 @@
     <collision>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_4 -->
     <visual>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_4_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -694,14 +694,14 @@
     <collision>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_4 -->
     <visual>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_4_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -710,14 +710,14 @@
     <collision>
       <origin xyz="0.0096 1.68546e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_4 -->
     <visual>
       <origin xyz="0.0125 1.54529e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_4_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -726,7 +726,7 @@
     <collision>
       <origin xyz="0.0125 1.54529e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -741,7 +741,7 @@
     <visual>
       <origin xyz="-0.035 -0.065 0.01905" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_roll_to_pitch.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_roll_to_pitch.stl"/>
       </geometry>
       <material name="left_roll_to_pitch_material">
         <color rgba="0.909804 0.572549 0.164706 1.0"/>
@@ -750,14 +750,14 @@
     <collision>
       <origin xyz="-0.035 -0.065 0.01905" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_roll_to_pitch.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_roll_to_pitch.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_5 -->
     <visual>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_5_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -766,14 +766,14 @@
     <collision>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_5 -->
     <visual>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_5_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -782,14 +782,14 @@
     <collision>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_5 -->
     <visual>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_5_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -798,14 +798,14 @@
     <collision>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_5 -->
     <visual>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_5_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -814,14 +814,14 @@
     <collision>
       <origin xyz="0.0647 -1.24141e-17 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_5 -->
     <visual>
       <origin xyz="0.0676 5.64978e-16 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_5_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -830,7 +830,7 @@
     <collision>
       <origin xyz="0.0676 5.64978e-16 0.00961" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -845,7 +845,7 @@
     <visual>
       <origin xyz="0.01606 0.14365 0.10925" rpy="-1.5708 1.90751e-28 1.66533e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
       <material name="leg_spacer_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -854,14 +854,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10925" rpy="-1.5708 1.90751e-28 1.66533e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_right_sheet -->
     <visual>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 1.52298e-28 5.55112e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_right_sheet_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -870,14 +870,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 1.52298e-28 5.55112e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_left_sheet -->
     <visual>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_left_sheet_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -886,14 +886,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part left_upper_cable_guide -->
     <visual>
       <origin xyz="0.03506 7.40612e-05 0.109134" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_upper_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_upper_cable_guide.stl"/>
       </geometry>
       <material name="left_upper_cable_guide_material">
         <color rgba="1 1 1 1.0"/>
@@ -902,14 +902,14 @@
     <collision>
       <origin xyz="0.03506 7.40612e-05 0.109134" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_upper_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_upper_cable_guide.stl"/>
       </geometry>
     </collision>
     <!-- Part left_leg_cover -->
     <visual>
       <origin xyz="0.03506 7.40612e-05 0.10915" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_leg_cover.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_leg_cover.stl"/>
       </geometry>
       <material name="left_leg_cover_material">
         <color rgba="1 1 1 1.0"/>
@@ -918,14 +918,14 @@
     <collision>
       <origin xyz="0.03506 7.40612e-05 0.10915" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_leg_cover.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_leg_cover.stl"/>
       </geometry>
     </collision>
     <!-- Part left_lower_cable_guide -->
     <visual>
       <origin xyz="0.03506 7.40612e-05 0.10915" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_lower_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_lower_cable_guide.stl"/>
       </geometry>
       <material name="left_lower_cable_guide_material">
         <color rgba="1 1 1 1.0"/>
@@ -934,14 +934,14 @@
     <collision>
       <origin xyz="0.03506 7.40612e-05 0.10915" rpy="-1.5708 6.85451e-30 -5.72329e-29"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_lower_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_lower_cable_guide.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_6 -->
     <visual>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_6_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -950,14 +950,14 @@
     <collision>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_6 -->
     <visual>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_6_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -966,14 +966,14 @@
     <collision>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_6 -->
     <visual>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_6_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -982,14 +982,14 @@
     <collision>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_6 -->
     <visual>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_6_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -998,14 +998,14 @@
     <collision>
       <origin xyz="2.84495e-16 -0.05315 0.00955" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_6 -->
     <visual>
       <origin xyz="5.41234e-16 -0.05315 0.00665" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_6_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1014,7 +1014,7 @@
     <collision>
       <origin xyz="5.41234e-16 -0.05315 0.00665" rpy="-1.5708 3.01566e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1029,7 +1029,7 @@
     <visual>
       <origin xyz="0.01606 0.14365 0.10925" rpy="-1.5708 -3.83419e-28 4.65921e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
       <material name="leg_spacer_2_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -1038,14 +1038,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10925" rpy="-1.5708 -3.83419e-28 4.65921e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_right_sheet_2 -->
     <visual>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 1.21452e-28 4.65921e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_right_sheet_2_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -1054,14 +1054,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 1.21452e-28 4.65921e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_left_sheet_2 -->
     <visual>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 -4.76575e-30 4.65921e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_left_sheet_2_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -1070,14 +1070,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 -4.76575e-30 4.65921e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_7 -->
     <visual>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_7_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1086,14 +1086,14 @@
     <collision>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_7 -->
     <visual>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_7_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1102,14 +1102,14 @@
     <collision>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_7 -->
     <visual>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_7_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1118,14 +1118,14 @@
     <collision>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_7 -->
     <visual>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_7_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1134,14 +1134,14 @@
     <collision>
       <origin xyz="-6.93889e-18 -0.05315 0.00955" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_7 -->
     <visual>
       <origin xyz="-6.73073e-16 -0.05315 0.00665" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_7_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1150,7 +1150,7 @@
     <collision>
       <origin xyz="-6.73073e-16 -0.05315 0.00665" rpy="-1.5708 2.7001e-17 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1165,7 +1165,7 @@
     <visual>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_side.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_side.stl"/>
       </geometry>
       <material name="foot_side_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -1174,14 +1174,14 @@
     <collision>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_side.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_side.stl"/>
       </geometry>
     </collision>
     <!-- Part foot_bottom_tpu -->
     <visual>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_tpu.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_tpu.stl"/>
       </geometry>
       <material name="foot_bottom_tpu_material">
         <color rgba="0.305882 0.298039 0.278431 1.0"/>
@@ -1190,14 +1190,14 @@
     <collision>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_tpu.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_tpu.stl"/>
       </geometry>
     </collision>
     <!-- Part foot_bottom_pla -->
     <visual>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_pla.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_pla.stl"/>
       </geometry>
       <material name="foot_bottom_pla_material">
         <color rgba="0.305882 0.298039 0.278431 1.0"/>
@@ -1206,14 +1206,14 @@
     <collision>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_pla.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_pla.stl"/>
       </geometry>
     </collision>
     <!-- Part foot_top -->
     <visual>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_top.stl"/>
       </geometry>
       <material name="foot_top_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -1222,7 +1222,7 @@
     <collision>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -1.24631e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_top.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1292,7 +1292,7 @@
     <visual>
       <origin xyz="-0.02 -0.02511 0.01905" rpy="-1.5708 4.87683e-32 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/neck_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/neck_left_sheet.stl"/>
       </geometry>
       <material name="neck_left_sheet_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -1301,14 +1301,14 @@
     <collision>
       <origin xyz="-0.02 -0.02511 0.01905" rpy="-1.5708 4.87683e-32 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/neck_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/neck_left_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part neck_right_sheet -->
     <visual>
       <origin xyz="-0.02 -0.02511 0.01905" rpy="-1.5708 3.96984e-18 -5.55112e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/neck_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/neck_right_sheet.stl"/>
       </geometry>
       <material name="neck_right_sheet_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -1317,14 +1317,14 @@
     <collision>
       <origin xyz="-0.02 -0.02511 0.01905" rpy="-1.5708 3.96984e-18 -5.55112e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/neck_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/neck_right_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_8 -->
     <visual>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_8_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1333,14 +1333,14 @@
     <collision>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_8 -->
     <visual>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_8_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1349,14 +1349,14 @@
     <collision>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_8 -->
     <visual>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_8_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1365,14 +1365,14 @@
     <collision>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_8 -->
     <visual>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_8_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1381,14 +1381,14 @@
     <collision>
       <origin xyz="-1.95156e-18 0.0405 0.00945" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_8 -->
     <visual>
       <origin xyz="-2.94903e-17 0.0405 0.00655" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_8_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1397,7 +1397,7 @@
     <collision>
       <origin xyz="-2.94903e-17 0.0405 0.00655" rpy="-1.5708 -1.19636e-16 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1412,7 +1412,7 @@
     <visual>
       <origin xyz="-0.02 -0.09111 0.01905" rpy="-1.5708 -3.06106e-32 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_pitch_to_yaw.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_pitch_to_yaw.stl"/>
       </geometry>
       <material name="head_pitch_to_yaw_material">
         <color rgba="0.4 0.4 0.4 1.0"/>
@@ -1421,7 +1421,7 @@
     <collision>
       <origin xyz="-0.02 -0.09111 0.01905" rpy="-1.5708 -3.06106e-32 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_pitch_to_yaw.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_pitch_to_yaw.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1436,7 +1436,7 @@
     <visual>
       <origin xyz="-0.02 6.12574e-18 -0.14821" rpy="1.30501e-26 -1.26218e-28 2.5243e-28"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_yaw_to_roll.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_yaw_to_roll.stl"/>
       </geometry>
       <material name="head_yaw_to_roll_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -1445,14 +1445,14 @@
     <collision>
       <origin xyz="-0.02 6.12574e-18 -0.14821" rpy="1.30501e-26 -1.26218e-28 2.5243e-28"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_yaw_to_roll.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_yaw_to_roll.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_9 -->
     <visual>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_9_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1461,14 +1461,14 @@
     <collision>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_9 -->
     <visual>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_9_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1477,14 +1477,14 @@
     <collision>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_9 -->
     <visual>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_9_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1493,14 +1493,14 @@
     <collision>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_9 -->
     <visual>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_9_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1509,14 +1509,14 @@
     <collision>
       <origin xyz="0.0255 7.18284e-19 -0.00945" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_9 -->
     <visual>
       <origin xyz="0.0255 3.86654e-16 -0.00655" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_9_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1525,7 +1525,7 @@
     <collision>
       <origin xyz="0.0255 3.86654e-16 -0.00655" rpy="1.5708 -0 -5.95869e-33"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1540,7 +1540,7 @@
     <visual>
       <origin xyz="-0.120516 -4.15725e-05 0.0707567" rpy="2.08843 1.55243 2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_antenna_holder.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_antenna_holder.stl"/>
       </geometry>
       <material name="right_antenna_holder_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -1549,14 +1549,14 @@
     <collision>
       <origin xyz="-0.120516 -4.15725e-05 0.0707567" rpy="2.08843 1.55243 2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_antenna_holder.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_antenna_holder.stl"/>
       </geometry>
     </collision>
     <!-- Part antenna -->
     <visual>
       <origin xyz="-0.0711521 0.181141 0.0674301" rpy="-1.59373 1.55243 -2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/antenna.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/antenna.stl"/>
       </geometry>
       <material name="antenna_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -1565,14 +1565,14 @@
     <collision>
       <origin xyz="-0.0711521 0.181141 0.0674301" rpy="-1.59373 1.55243 -2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/antenna.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/antenna.stl"/>
       </geometry>
     </collision>
     <!-- Part antenna_2 -->
     <visual>
       <origin xyz="-0.119541 0.000224163 0.0707517" rpy="2.08843 1.55243 2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/antenna.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/antenna.stl"/>
       </geometry>
       <material name="antenna_2_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -1581,14 +1581,14 @@
     <collision>
       <origin xyz="-0.119541 0.000224163 0.0707517" rpy="2.08843 1.55243 2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/antenna.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/antenna.stl"/>
       </geometry>
     </collision>
     <!-- Part left_antenna_holder -->
     <visual>
       <origin xyz="-0.120516 -0.000158428 0.0707567" rpy="-2.08843 1.55243 -2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_antenna_holder.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_antenna_holder.stl"/>
       </geometry>
       <material name="left_antenna_holder_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -1597,14 +1597,14 @@
     <collision>
       <origin xyz="-0.120516 -0.000158428 0.0707567" rpy="-2.08843 1.55243 -2.10702"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_antenna_holder.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_antenna_holder.stl"/>
       </geometry>
     </collision>
     <!-- Part cam -->
     <visual>
       <origin xyz="0.0242018 -0.0025 -0.0580502" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/cam.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/cam.stl"/>
       </geometry>
       <material name="cam_material">
         <color rgba="0.627451 0.627451 0.627451 1.0"/>
@@ -1613,14 +1613,14 @@
     <collision>
       <origin xyz="0.0242018 -0.0025 -0.0580502" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/cam.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/cam.stl"/>
       </geometry>
     </collision>
     <!-- Part head_bottom_back -->
     <visual>
       <origin xyz="-0.193652 -0.0001 0.0419331" rpy="2.86486e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_bottom_back.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_bottom_back.stl"/>
       </geometry>
       <material name="head_bottom_back_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -1629,14 +1629,14 @@
     <collision>
       <origin xyz="-0.193652 -0.0001 0.0419331" rpy="2.86486e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_bottom_back.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_bottom_back.stl"/>
       </geometry>
     </collision>
     <!-- Part back_head_panel -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="4.5431e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/back_head_panel.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/back_head_panel.stl"/>
       </geometry>
       <material name="back_head_panel_material">
         <color rgba="1 1 1 1.0"/>
@@ -1645,14 +1645,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="4.5431e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/back_head_panel.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/back_head_panel.stl"/>
       </geometry>
     </collision>
     <!-- Part eye_panel___left -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_panel___left.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_panel___left.stl"/>
       </geometry>
       <material name="eye_panel___left_material">
         <color rgba="0.494118 0.494118 0.52549 1.0"/>
@@ -1661,14 +1661,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_panel___left.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_panel___left.stl"/>
       </geometry>
     </collision>
     <!-- Part lamp -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="1.1602e-16 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/lamp.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/lamp.stl"/>
       </geometry>
       <material name="lamp_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -1677,14 +1677,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="1.1602e-16 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/lamp.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/lamp.stl"/>
       </geometry>
     </collision>
     <!-- Part eye_right_base -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_right_base.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_right_base.stl"/>
       </geometry>
       <material name="eye_right_base_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -1693,14 +1693,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_right_base.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_right_base.stl"/>
       </geometry>
     </collision>
     <!-- Part eye_panel___right -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="7.43866e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_panel___right.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_panel___right.stl"/>
       </geometry>
       <material name="eye_panel___right_material">
         <color rgba="0.494118 0.494118 0.52549 1.0"/>
@@ -1709,14 +1709,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="7.43866e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_panel___right.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_panel___right.stl"/>
       </geometry>
     </collision>
     <!-- Part head_roll_mount -->
     <visual>
       <origin xyz="-0.12906 2.54381e-17 0.06095" rpy="-1.8849e-27 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_roll_mount.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_roll_mount.stl"/>
       </geometry>
       <material name="head_roll_mount_material">
         <color rgba="0.501961 0.501961 0.501961 1.0"/>
@@ -1725,14 +1725,14 @@
     <collision>
       <origin xyz="-0.12906 2.54381e-17 0.06095" rpy="-1.8849e-27 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_roll_mount.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_roll_mount.stl"/>
       </geometry>
     </collision>
     <!-- Part raspberrypizerow -->
     <visual>
       <origin xyz="0.0319717 0.056 -0.00305" rpy="1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/raspberrypizerow.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/raspberrypizerow.stl"/>
       </geometry>
       <material name="raspberrypizerow_material">
         <color rgba="0.231373 0.380392 0.705882 1.0"/>
@@ -1741,14 +1741,14 @@
     <collision>
       <origin xyz="0.0319717 0.056 -0.00305" rpy="1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/raspberrypizerow.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/raspberrypizerow.stl"/>
       </geometry>
     </collision>
     <!-- Part eye_left -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="7.43866e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_left.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_left.stl"/>
       </geometry>
       <material name="eye_left_material">
         <color rgba="0.494118 0.494118 0.52549 1.0"/>
@@ -1757,14 +1757,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="7.43866e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_left.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_left.stl"/>
       </geometry>
     </collision>
     <!-- Part eye_right -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_right.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_right.stl"/>
       </geometry>
       <material name="eye_right_material">
         <color rgba="0.494118 0.494118 0.52549 1.0"/>
@@ -1773,14 +1773,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_right.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_right.stl"/>
       </geometry>
     </collision>
     <!-- Part full_speaker -->
     <visual>
       <origin xyz="0.0107458 -0.0615877 0.00942403" rpy="7.11086e-15 1.30458 -1.32344"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/full_speaker.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/full_speaker.stl"/>
       </geometry>
       <material name="full_speaker_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -1789,14 +1789,14 @@
     <collision>
       <origin xyz="0.0107458 -0.0615877 0.00942403" rpy="7.11086e-15 1.30458 -1.32344"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/full_speaker.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/full_speaker.stl"/>
       </geometry>
     </collision>
     <!-- Part roll_bearing_3 -->
     <visual>
       <origin xyz="-6.05295e-08 -0.035 0.167225" rpy="1.11022e-16 -2.6e-07 -8.32668e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_bearing.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_bearing.stl"/>
       </geometry>
       <material name="roll_bearing_3_material">
         <color rgba="0.6 0.6 0.6 1.0"/>
@@ -1805,14 +1805,14 @@
     <collision>
       <origin xyz="-6.05295e-08 -0.035 0.167225" rpy="1.11022e-16 -2.6e-07 -8.32668e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_bearing.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_bearing.stl"/>
       </geometry>
     </collision>
     <!-- Part sg90 -->
     <visual>
       <origin xyz="0.00330552 0.0313341 0.110966" rpy="1.01956e-06 -1.32228 -1.83803"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/sg90.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/sg90.stl"/>
       </geometry>
       <material name="sg90_material">
         <color rgba="0.435294 0.670588 0.976471 1.0"/>
@@ -1821,14 +1821,14 @@
     <collision>
       <origin xyz="0.00330552 0.0313341 0.110966" rpy="1.01956e-06 -1.32228 -1.83803"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/sg90.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/sg90.stl"/>
       </geometry>
     </collision>
     <!-- Part faceplate -->
     <visual>
       <origin xyz="-0.193699 -0.0001 0.04195" rpy="9.08546e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/faceplate.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/faceplate.stl"/>
       </geometry>
       <material name="faceplate_material">
         <color rgba="0.74902 0.74902 0.74902 1.0"/>
@@ -1837,14 +1837,14 @@
     <collision>
       <origin xyz="-0.193699 -0.0001 0.04195" rpy="9.08546e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/faceplate.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/faceplate.stl"/>
       </geometry>
     </collision>
     <!-- Part sg90_2 -->
     <visual>
       <origin xyz="0.00330552 -0.0315341 0.110966" rpy="-1.01956e-06 -1.32228 1.83803"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/sg90.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/sg90.stl"/>
       </geometry>
       <material name="sg90_2_material">
         <color rgba="0.435294 0.670588 0.976471 1.0"/>
@@ -1853,14 +1853,14 @@
     <collision>
       <origin xyz="0.00330552 -0.0315341 0.110966" rpy="-1.01956e-06 -1.32228 1.83803"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/sg90.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/sg90.stl"/>
       </geometry>
     </collision>
     <!-- Part speaker_interface -->
     <visual>
       <origin xyz="-0.123538 -0.00270746 0.0513235" rpy="1.2e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/speaker_interface.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/speaker_interface.stl"/>
       </geometry>
       <material name="speaker_interface_material">
         <color rgba="0.615686 0.811765 0.929412 1.0"/>
@@ -1869,14 +1869,14 @@
     <collision>
       <origin xyz="-0.123538 -0.00270746 0.0513235" rpy="1.2e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/speaker_interface.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/speaker_interface.stl"/>
       </geometry>
     </collision>
     <!-- Part speaker_stand -->
     <visual>
       <origin xyz="-0.123538 -0.00270746 0.0513235" rpy="2.73149e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/speaker_stand.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/speaker_stand.stl"/>
       </geometry>
       <material name="speaker_stand_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -1885,14 +1885,14 @@
     <collision>
       <origin xyz="-0.123538 -0.00270746 0.0513235" rpy="2.73149e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/speaker_stand.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/speaker_stand.stl"/>
       </geometry>
     </collision>
     <!-- Part eye_left_base -->
     <visual>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_left_base.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_left_base.stl"/>
       </geometry>
       <material name="eye_left_base_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -1901,14 +1901,14 @@
     <collision>
       <origin xyz="-0.193851 -0.0001 0.0419499" rpy="8.82644e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/eye_left_base.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/eye_left_base.stl"/>
       </geometry>
     </collision>
     <!-- Part head_bottom_front -->
     <visual>
       <origin xyz="-0.193651 -0.0001 0.0419499" rpy="9.0881e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_bottom_front.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_bottom_front.stl"/>
       </geometry>
       <material name="head_bottom_front_material">
         <color rgba="0.627451 0.627451 0.643137 1.0"/>
@@ -1917,14 +1917,14 @@
     <collision>
       <origin xyz="-0.193651 -0.0001 0.0419499" rpy="9.0881e-24 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/head_bottom_front.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/head_bottom_front.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_10 -->
     <visual>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_10_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1933,14 +1933,14 @@
     <collision>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_10 -->
     <visual>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_10_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1949,14 +1949,14 @@
     <collision>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_10 -->
     <visual>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_10_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1965,14 +1965,14 @@
     <collision>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_10 -->
     <visual>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_10_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -1981,14 +1981,14 @@
     <collision>
       <origin xyz="0.0255 7.04731e-19 -0.00945" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_10 -->
     <visual>
       <origin xyz="0.0255 3.2999e-16 -0.00655" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_10_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -1997,7 +1997,7 @@
     <collision>
       <origin xyz="0.0255 3.2999e-16 -0.00655" rpy="1.5708 -0 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -2044,7 +2044,7 @@
     <visual>
       <origin xyz="-3.67761e-16 -0.035 0.01905" rpy="4.41706e-18 -5.55035e-17 -3.05311e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_bottom.stl"/>
       </geometry>
       <material name="roll_motor_bottom_2_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -2053,14 +2053,14 @@
     <collision>
       <origin xyz="-3.67761e-16 -0.035 0.01905" rpy="4.41706e-18 -5.55035e-17 -3.05311e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_bottom.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_bottom.stl"/>
       </geometry>
     </collision>
     <!-- Part roll_motor_top_2 -->
     <visual>
       <origin xyz="0 -0.035 0.01905" rpy="0 -0 -1.3703e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_top.stl"/>
       </geometry>
       <material name="roll_motor_top_2_material">
         <color rgba="0.901961 0.901961 0.901961 1.0"/>
@@ -2069,14 +2069,14 @@
     <collision>
       <origin xyz="0 -0.035 0.01905" rpy="0 -0 -1.3703e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/roll_motor_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/roll_motor_top.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_11 -->
     <visual>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_11_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2085,14 +2085,14 @@
     <collision>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_11 -->
     <visual>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_11_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2101,14 +2101,14 @@
     <collision>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_11 -->
     <visual>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_11_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2117,14 +2117,14 @@
     <collision>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_11 -->
     <visual>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_11_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2133,14 +2133,14 @@
     <collision>
       <origin xyz="0.0096 5.94177e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_11 -->
     <visual>
       <origin xyz="0.0125 5.99382e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_11_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2149,7 +2149,7 @@
     <collision>
       <origin xyz="0.0125 5.99382e-14 -0.020515" rpy="-1.5708 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -2164,7 +2164,7 @@
     <visual>
       <origin xyz="0.035 -0.065 0.01905" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_roll_to_pitch.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_roll_to_pitch.stl"/>
       </geometry>
       <material name="right_roll_to_pitch_material">
         <color rgba="0.909804 0.572549 0.164706 1.0"/>
@@ -2173,14 +2173,14 @@
     <collision>
       <origin xyz="0.035 -0.065 0.01905" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_roll_to_pitch.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_roll_to_pitch.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_12 -->
     <visual>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_12_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2189,14 +2189,14 @@
     <collision>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_12 -->
     <visual>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_12_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2205,14 +2205,14 @@
     <collision>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_12 -->
     <visual>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_12_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2221,14 +2221,14 @@
     <collision>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_12 -->
     <visual>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_12_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2237,14 +2237,14 @@
     <collision>
       <origin xyz="-0.0647 1.71846e-17 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_12 -->
     <visual>
       <origin xyz="-0.0676 1.05276e-16 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_12_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2253,7 +2253,7 @@
     <collision>
       <origin xyz="-0.0676 1.05276e-16 0.00961" rpy="-1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -2268,7 +2268,7 @@
     <visual>
       <origin xyz="0.01606 -0.14365 -0.07215" rpy="1.5708 2.62588e-27 2.77556e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
       <material name="leg_spacer_3_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -2277,14 +2277,14 @@
     <collision>
       <origin xyz="0.01606 -0.14365 -0.07215" rpy="1.5708 2.62588e-27 2.77556e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_right_sheet_3 -->
     <visual>
       <origin xyz="0.01606 -0.14365 -0.07205" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_right_sheet_3_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -2293,14 +2293,14 @@
     <collision>
       <origin xyz="0.01606 -0.14365 -0.07205" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_left_sheet_3 -->
     <visual>
       <origin xyz="0.01606 -0.14365 -0.07205" rpy="1.5708 3.42768e-27 -2.77556e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_left_sheet_3_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -2309,14 +2309,14 @@
     <collision>
       <origin xyz="0.01606 -0.14365 -0.07205" rpy="1.5708 3.42768e-27 -2.77556e-17"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part right_lower_cable_guide -->
     <visual>
       <origin xyz="0.03506 -7.40612e-05 0.1092" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_lower_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_lower_cable_guide.stl"/>
       </geometry>
       <material name="right_lower_cable_guide_material">
         <color rgba="1 1 1 1.0"/>
@@ -2325,14 +2325,14 @@
     <collision>
       <origin xyz="0.03506 -7.40612e-05 0.1092" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_lower_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_lower_cable_guide.stl"/>
       </geometry>
     </collision>
     <!-- Part right_upper_cable_guide -->
     <visual>
       <origin xyz="0.03506 -7.40612e-05 0.109184" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_upper_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_upper_cable_guide.stl"/>
       </geometry>
       <material name="right_upper_cable_guide_material">
         <color rgba="1 1 1 1.0"/>
@@ -2341,14 +2341,14 @@
     <collision>
       <origin xyz="0.03506 -7.40612e-05 0.109184" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_upper_cable_guide.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_upper_cable_guide.stl"/>
       </geometry>
     </collision>
     <!-- Part right_leg_cover -->
     <visual>
       <origin xyz="0.03506 -7.40612e-05 0.1092" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_leg_cover.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_leg_cover.stl"/>
       </geometry>
       <material name="right_leg_cover_material">
         <color rgba="1 1 1 1.0"/>
@@ -2357,14 +2357,14 @@
     <collision>
       <origin xyz="0.03506 -7.40612e-05 0.1092" rpy="1.5708 -2.44384e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/right_leg_cover.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/right_leg_cover.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_13 -->
     <visual>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_13_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2373,14 +2373,14 @@
     <collision>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_13 -->
     <visual>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_13_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2389,14 +2389,14 @@
     <collision>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_13 -->
     <visual>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_13_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2405,14 +2405,14 @@
     <collision>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_13 -->
     <visual>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_13_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2421,14 +2421,14 @@
     <collision>
       <origin xyz="-4.16334e-17 0.05315 0.02755" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_13 -->
     <visual>
       <origin xyz="-4.64906e-16 0.05315 0.03045" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_13_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2437,7 +2437,7 @@
     <collision>
       <origin xyz="-4.64906e-16 0.05315 0.03045" rpy="1.5708 2.77556e-17 -1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -2452,7 +2452,7 @@
     <visual>
       <origin xyz="0.01606 0.14365 0.10925" rpy="-1.5708 -1.29214e-27 1.11022e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
       <material name="leg_spacer_4_material">
         <color rgba="0.647059 0.647059 0.647059 1.0"/>
@@ -2461,14 +2461,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10925" rpy="-1.5708 -1.29214e-27 1.11022e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/leg_spacer.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/leg_spacer.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_right_sheet_4 -->
     <visual>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 5.75878e-28 1.11022e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_right_sheet_4_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -2477,14 +2477,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 5.75878e-28 1.11022e-16"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_right_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part left_knee_to_ankle_left_sheet_4 -->
     <visual>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 -4.09534e-30 4.83177e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
       <material name="left_knee_to_ankle_left_sheet_4_material">
         <color rgba="0.223529 0.219608 0.219608 1.0"/>
@@ -2493,14 +2493,14 @@
     <collision>
       <origin xyz="0.01606 0.14365 0.10915" rpy="-1.5708 -4.09534e-30 4.83177e-30"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/left_knee_to_ankle_left_sheet.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0123middlecase_56_14 -->
     <visual>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
       <material name="wj_wk00_0123middlecase_56_14_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2509,14 +2509,14 @@
     <collision>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0123middlecase_56.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0123middlecase_56.stl"/>
       </geometry>
     </collision>
     <!-- Part drive_palonier_14 -->
     <visual>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
       <material name="drive_palonier_14_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2525,14 +2525,14 @@
     <collision>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/drive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/drive_palonier.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0124bottomcase_45_14 -->
     <visual>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
       <material name="wj_wk00_0124bottomcase_45_14_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2541,14 +2541,14 @@
     <collision>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0124bottomcase_45.stl"/>
       </geometry>
     </collision>
     <!-- Part wj_wk00_0122topcabinetcase_95_14 -->
     <visual>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
       <material name="wj_wk00_0122topcabinetcase_95_14_material">
         <color rgba="0.247059 0.243137 0.243137 1.0"/>
@@ -2557,14 +2557,14 @@
     <collision>
       <origin xyz="-7.63278e-17 -0.05315 0.00955" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/wj_wk00_0122topcabinetcase_95.stl"/>
       </geometry>
     </collision>
     <!-- Part passive_palonier_14 -->
     <visual>
       <origin xyz="1.52656e-16 -0.05315 0.00665" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
       <material name="passive_palonier_14_material">
         <color rgba="0.623529 0.666667 0.701961 1.0"/>
@@ -2573,7 +2573,7 @@
     <collision>
       <origin xyz="1.52656e-16 -0.05315 0.00665" rpy="-1.5708 9.79086e-26 1.5708"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/passive_palonier.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/passive_palonier.stl"/>
       </geometry>
     </collision>
   </link>
@@ -2588,7 +2588,7 @@
     <visual>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_side.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_side.stl"/>
       </geometry>
       <material name="foot_side_2_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -2597,14 +2597,14 @@
     <collision>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_side.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_side.stl"/>
       </geometry>
     </collision>
     <!-- Part foot_bottom_tpu_2 -->
     <visual>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_tpu.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_tpu.stl"/>
       </geometry>
       <material name="foot_bottom_tpu_2_material">
         <color rgba="0.305882 0.298039 0.278431 1.0"/>
@@ -2613,14 +2613,14 @@
     <collision>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_tpu.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_tpu.stl"/>
       </geometry>
     </collision>
     <!-- Part foot_bottom_pla_2 -->
     <visual>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_pla.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_pla.stl"/>
       </geometry>
       <material name="foot_bottom_pla_2_material">
         <color rgba="0.305882 0.298039 0.278431 1.0"/>
@@ -2629,14 +2629,14 @@
     <collision>
       <origin xyz="0.01656 0.2228 0.10955" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_bottom_pla.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_bottom_pla.stl"/>
       </geometry>
     </collision>
     <!-- Part foot_top_2 -->
     <visual>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_top.stl"/>
       </geometry>
       <material name="foot_top_2_material">
         <color rgba="0.980392 0.713725 0.00392157 1.0"/>
@@ -2645,7 +2645,7 @@
     <collision>
       <origin xyz="0.01606 0.2223 0.10905" rpy="-1.5708 -4.09534e-30 0"/>
       <geometry>
-        <mesh filename="package://mini_bdx_description/meshes/foot_top.stl"/>
+        <mesh filename="package://open_duck_mini_description/meshes/foot_top.stl"/>
       </geometry>
     </collision>
   </link>

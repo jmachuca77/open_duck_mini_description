@@ -38,7 +38,7 @@ def generate_launch_description():
     enable_foxglove_bridge = LaunchConfiguration('enable_foxglove_bridge')
 
     # 3) Load URDF
-    pkg_share = get_package_share_directory('mini_bdx_description')
+    pkg_share = get_package_share_directory('open_duck_mini_description')
     urdf_path = os.path.join(pkg_share, 'urdf', 'mini_bdx.urdf')
     with open(urdf_path, 'r') as inf:
         robot_description = inf.read()
@@ -63,7 +63,7 @@ def generate_launch_description():
 
     # 6) Hardware JSP (runs only if use_hw_jsp is true)
     hw_jsp = Node(
-        package='mini_bdx_description',
+        package='open_duck_mini_description',
         executable='mini_bdx_joint_state_publisher.py',
         name='mini_bdx_joint_state_publisher',
         output='screen',

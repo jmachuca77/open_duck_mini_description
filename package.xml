@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>mini_bdx_description</name>
+  <name>open_duck_mini_description</name>
   <version>0.1.0</version>
   <description>Robot description for the mini_bdx platform</description>
   <maintainer email="jaime@element.aero">Jaime Machuca</maintainer>
