@@ -18,20 +18,31 @@ class JointStatePublisher(Node):
         rate = self.get_parameter('publish_rate').get_parameter_value().double_value
         cfg_file = self.get_parameter('duck_config_file').get_parameter_value().string_value or None
 
-        self.dummy_joints = ["left_antenna", "right_antenna"]  # Dummy joints for urdf viz. Not controlled by hardware.
+
 
         # instantiate HWI
         duck_cfg = DuckConfig(cfg_file) if cfg_file else DuckConfig()
         self.hwi = HWI(duck_cfg)
 
+        self.dummy_joints = ["left_antenna", "right_antenna"]  # Dummy joints for urdf viz. Not controlled by hardware.
+        self.dummy_joint_values = [0.0, 0.0]
+        self.dummy_joint_insert_idx = 9
+        joint_names = list(self.hwi.joints.keys())
+        joint_names[self.dummy_joint_insert_idx:self.dummy_joint_insert_idx] = self.dummy_joints
+        self.joint_names = joint_names
+
         self.hwi.turn_on()
-        self.target_positions = self.hwi.init_pos.copy()  # start with the hardware's init positions
+        # Initialize target_positions as a dict { joint_name: init_position }
+        self.target_positions = {name: self.hwi.init_pos[name] for name in self.hwi.joints.keys()}
+        # Also ensure dummy joints are in the dict:
+        # self.target_positions["left_antenna"] = 0.0
+        # self.target_positions["right_antenna"] = 0.0
 
         # publisher & timer
         self.pub = self.create_publisher(JointState, 'joint_states', 10)
 
         # Subscriber for target joint states
-        self.target_positions = None
+        # self.target_positions = None
         self.create_subscription(
             JointState,
             '/target_joint_states',
@@ -75,9 +86,17 @@ class JointStatePublisher(Node):
         # 3) Publish actual joint states
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
-        msg.name = list(self.hwi.joints.keys())
-        msg.position = positions.tolist()
-        msg.velocity = velocities.tolist()
+
+        # Convert positions and velocities to lists and insert dummy joint values
+        positions_list = positions.tolist()
+        velocities_list = velocities.tolist()
+
+        positions_list[self.dummy_joint_insert_idx:self.dummy_joint_insert_idx] = self.dummy_joint_values
+        velocities_list[self.dummy_joint_insert_idx:self.dummy_joint_insert_idx] = self.dummy_joint_values
+
+        msg.name = self.joint_names
+        msg.position = positions_list
+        msg.velocity = velocities_list
 
         self.pub.publish(msg)
 
