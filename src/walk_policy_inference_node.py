@@ -23,7 +23,7 @@ class WalkPolicyInferenceNode(Node):
     ROS2 node that uses HWI solely to load DuckConfig (initial positions, joint names),
     then subscribes to /joint_states, /bno055/imu_raw, /feet_switch, /cmd_vel,
     builds the same 1×101 observation vector as RLWalk.get_obs(), runs the ONNX policy,
-    masks out head/antenna actions, and publishes 14-joint targets on /target_joint_states.
+    masks out head/antenna actions, merges any head commands, and publishes 14-joint targets on /target_joint_states.
     """
 
     def __init__(self):
@@ -188,11 +188,20 @@ class WalkPolicyInferenceNode(Node):
         self.last_imu_update = self.get_clock().now()
 
     def cmd_vel_callback(self, msg: Twist):
-        """Fill cmds[0:3] = (linear.x, linear.y, angular.z). Leave cmds[3:7]=0."""
+        """Fill cmds[0:3] = (linear.x, linear.y, angular.z). Then update imitation phase speed."""
         self.cmds[0] = msg.linear.x
         self.cmds[1] = msg.linear.y
         self.cmds[2] = msg.angular.z
-        # cmds[3:7] remain zero
+        # cmds[3:7] remain as head commands (set externally if desired)
+
+        # --- Update phase_frequency_factor exactly like RLWalk.get_phase_frequency_factor() ---
+        x_vel = self.cmds[0]
+        max_phase_frequency = 1.2
+        min_phase_frequency = 1.0
+        freq = min_phase_frequency + (abs(x_vel) / 0.15) * (max_phase_frequency - min_phase_frequency)
+        # Clamp between [min_phase_frequency, max_phase_frequency]
+        self.phase_frequency_factor = float(np.clip(freq, min_phase_frequency, max_phase_frequency))
+
         self.last_cmd_vel_update = self.get_clock().now()
 
     def feet_contact_callback(self, msg: FeetState):
@@ -222,7 +231,7 @@ class WalkPolicyInferenceNode(Node):
           • Update imitation_phase (2 floats)
           • Build obs (101 floats) in RLWalk order
           • Run ONNX inference, apply mask, update action history
-          • Compute motor_targets (14 floats)
+          • Compute motor_targets (14 floats), then merge head commands
           • Publish /target_joint_states with those 14 joints
         """
         # --- 6.1. Startup check ---
@@ -298,6 +307,12 @@ class WalkPolicyInferenceNode(Node):
 
         # --- 6.8. Compute new motor_targets (14 floats) ---
         self.motor_targets = self.init_pos + action * self.action_scale
+
+        # --- Merge head commands exactly like RLWalk ---
+        # RLWalk did: head_motor_targets = last_commands[3:] + motor_targets[5:9]
+        # and then: motor_targets[5:9] = head_motor_targets
+        head_cmds = self.cmds[3:7]  # [head_pan, head_tilt, head_roll, head_yaw]
+        self.motor_targets[5:9] = head_cmds + self.motor_targets[5:9]
 
         # --- 6.9. Publish the 14-joint targets on /target_joint_states ---
         msg = JointState()
