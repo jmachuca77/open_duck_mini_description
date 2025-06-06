@@ -11,6 +11,7 @@ import os
 
 from sensor_msgs.msg import JointState, Imu
 from geometry_msgs.msg import Twist
+from std_msgs.msg import Float32
 from open_duck_mini_description.msg import FeetState
 
 from mini_bdx_runtime.rustypot_position_hwi import HWI
@@ -23,7 +24,8 @@ class WalkPolicyInferenceNode(Node):
     ROS2 node that uses HWI solely to load DuckConfig (initial positions, joint names),
     then subscribes to /joint_states, /bno055/imu_raw, /feet_switch, /cmd_vel,
     builds the same 1×101 observation vector as RLWalk.get_obs(), runs the ONNX policy,
-    masks out head/antenna actions, merges any head commands, and publishes 14-joint targets on /target_joint_states.
+    masks out head/antenna actions, merges any head commands, publishes 14-joint targets on /target_joint_states,
+    and publishes the current phase_frequency_factor on /phase_frequency_factor.
     """
 
     def __init__(self):
@@ -167,6 +169,11 @@ class WalkPolicyInferenceNode(Node):
             JointState, '/joint_states', self.joint_states_callback, 1
         )
 
+        # Publisher for phase_frequency_factor (debug)
+        self.freq_pub = self.create_publisher(
+            Float32, '/phase_frequency_factor', 1
+        )
+
         # --- 6. save_obs parameter (defaults to False) ---
         self.declare_parameter('save_obs', False)
         self.save_obs = self.get_parameter('save_obs').get_parameter_value().bool_value
@@ -201,13 +208,20 @@ class WalkPolicyInferenceNode(Node):
 
         # --- Update phase_frequency_factor exactly like RLWalk.get_phase_frequency_factor() ---
         x_vel = self.cmds[0]
-        max_phase_frequency = 1.2
-        min_phase_frequency = 1.0
-        freq = min_phase_frequency + (abs(x_vel) / 0.15) * (
-            max_phase_frequency - min_phase_frequency
-        )
-        # Clamp between [min_phase_frequency, max_phase_frequency]
-        self.phase_frequency_factor = float(np.clip(freq, min_phase_frequency, max_phase_frequency))
+        if abs(x_vel) < 1e-3:
+            # If command is (essentially) zero, freeze phase (no walking)
+            self.phase_frequency_factor = 0.0
+        else:
+            max_phase_frequency = 1.2
+            min_phase_frequency = 1.0
+            freq = min_phase_frequency + (abs(x_vel) / 0.15) * (
+                max_phase_frequency - min_phase_frequency
+            )
+            # Clamp between [min_phase_frequency, max_phase_frequency]
+            self.phase_frequency_factor = float(np.clip(freq, min_phase_frequency, max_phase_frequency))
+
+        # Publish current frequency factor for debugging
+        self.freq_pub.publish(Float32(data=self.phase_frequency_factor))
 
         self.last_cmd_vel_update = self.get_clock().now()
 
