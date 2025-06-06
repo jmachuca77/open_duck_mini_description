@@ -17,6 +17,7 @@ from open_duck_mini_description.msg import FeetState
 from mini_bdx_runtime.rustypot_position_hwi import HWI
 from mini_bdx_runtime.duck_config import DuckConfig
 from mini_bdx_runtime.poly_reference_motion import PolyReferenceMotion
+from mini_bdx_runtime.rl_utils import LowPassActionFilter
 
 
 class WalkPolicyInferenceNode(Node):
@@ -25,26 +26,26 @@ class WalkPolicyInferenceNode(Node):
     then subscribes to /joint_states, /bno055/imu_raw, /feet_switch, /cmd_vel,
     builds the same 1×101 observation vector as RLWalk.get_obs(), runs the ONNX policy,
     masks out head/antenna actions, merges any head commands, publishes 14-joint targets on /target_joint_states,
-    and publishes the current phase_frequency_factor on /phase_frequency_factor.
+    publishes the current phase_frequency_factor on /phase_frequency_factor, and optionally saves observations.
     """
 
     def __init__(self):
         super().__init__('walk_policy_inference_node')
 
-        # --- 1. Load ONNX model with updated path and execution provider ---
+        # Load ONNX model with updated path and execution provider
         pkg_share = get_package_share_directory('open_duck_mini_description')
         model_path = os.path.join(pkg_share, 'checkpoints', 'BEST_WALK_ONNX_2.onnx')
         self.model = ort.InferenceSession(model_path, providers=['CPUExecutionProvider'])
 
-        # --- 2. Instantiate HWI & DuckConfig to get joint ordering and init_pos ---
+        # Instantiate HWI & DuckConfig to get joint ordering and init_pos
         duck_cfg = DuckConfig()  # loads default ~/duck_config.json if present
         self.hwi = HWI(duck_cfg)
-        # No need to call hwi.turn_on() here; we’re not reading hardware positions directly.
+        # We will call turn_on() later after setting PID gains.
 
-        # 2.1. Get the 14 hardware joints from HWI (dictionary keys are ordered)
+        # Get the 14 hardware joints from HWI (dictionary keys are ordered)
         hw_joint_names = list(self.hwi.joints.keys())  # e.g. ["left_hip_yaw", "left_hip_roll", ...] (14 names)
 
-        # 2.2. We need to insert two dummy “antenna” joints at index 9, just like JointStatePublisher does.
+        # Insert two dummy “antenna” joints at index 9, just like JointStatePublisher does.
         self.dummy_joints = ["left_antenna", "right_antenna"]
         self.dummy_insert_idx = 9
         joint_names_16 = hw_joint_names.copy()
@@ -53,7 +54,7 @@ class WalkPolicyInferenceNode(Node):
 
         self.joint_names_16 = joint_names_16
 
-        # 2.3. Identify antenna indices and DOF indices
+        # Identify antenna indices and DOF indices
         self.antenna_indices = [
             self.joint_names_16.index("left_antenna"),
             self.joint_names_16.index("right_antenna")
@@ -61,7 +62,7 @@ class WalkPolicyInferenceNode(Node):
         # Indices of actual 14 DOFs = all except antenna indices
         self.dof_indices = [i for i in range(len(self.joint_names_16)) if i not in self.antenna_indices]
 
-        # 2.4. Build init_pos16: for each name in joint_names_16, take from hwi.init_pos if present, else 0.0
+        # Build init_pos16: for each name in joint_names_16, take from hwi.init_pos if present, else 0.0
         init_pos16 = []
         for name in self.joint_names_16:
             if name in self.hwi.init_pos:
@@ -70,30 +71,42 @@ class WalkPolicyInferenceNode(Node):
                 init_pos16.append(0.0)  # dummy joint init = 0
         self.init_pos16 = np.array(init_pos16, dtype=np.float32)
 
-        # 2.5. Extract 14-length init_pos (drop antenna entries)
+        # Extract 14-length init_pos (drop antenna entries)
         self.init_pos = self.init_pos16[self.dof_indices]
 
-        # --- 3. Policy-related parameters ---
+        # Declare PID and cutoff parameters (default to RLWalk's defaults)
+        self.declare_parameter('pid_p', 30)
+        self.declare_parameter('pid_i', 0)
+        self.declare_parameter('pid_d', 0)
+        self.declare_parameter('cutoff_frequency', 0.0)
 
-        # 3.1. Joint-velocity scale (policy uses dof_vel * 0.05)
+        # Retrieve PID values
+        self.pid_p = self.get_parameter('pid_p').get_parameter_value().integer_value
+        self.pid_i = self.get_parameter('pid_i').get_parameter_value().integer_value
+        self.pid_d = self.get_parameter('pid_d').get_parameter_value().integer_value
+
+        # Retrieve cutoff frequency; if <= 0, we disable filtering
+        self.cutoff_frequency = self.get_parameter('cutoff_frequency').get_parameter_value().double_value
+
+        # Joint-velocity scale (policy uses dof_vel * 0.05)
         self.joint_vel_scale = 0.05
 
-        # 3.2. Controller command vector “cmds” (length 7)
+        # Controller command vector “cmds” (length 7)
         # [forward_cmd, lateral_cmd, yaw_cmd, head_pan, head_tilt, head_roll, head_yaw]
         self.cmds = np.zeros(7, dtype=np.float32)
 
-        # 3.3. Action-history arrays (each length 14)
+        # Action-history arrays (each length 14)
         self.last_action = np.zeros(14, dtype=np.float32)
         self.last_last_action = np.zeros(14, dtype=np.float32)
         self.last_last_last_action = np.zeros(14, dtype=np.float32)
 
-        # 3.4. Current motor_targets (14 floats), initialize to init_pos
+        # Current motor_targets (14 floats), initialize to init_pos
         self.motor_targets = self.init_pos.copy()
 
-        # 3.5. Feet-contacts placeholder (2 floats)
+        # Feet-contacts placeholder (2 floats)
         self.feet_contacts = None
 
-        # 3.6. Imitation-phase logic
+        # Imitation-phase logic
         prm_path = os.path.join(get_package_share_directory('open_duck_mini_description'),
                                  'config/polynomial_coefficients.pkl')
         self.PRM = PolyReferenceMotion(prm_path)
@@ -102,33 +115,23 @@ class WalkPolicyInferenceNode(Node):
         self.phase_frequency_factor = 1.0
         self.phase_frequency_factor_offset = 0.0
 
-        # 3.7. Action scale (policy’s “action_scale” = 0.25)
+        # Action scale (policy’s “action_scale” = 0.25)
         self.action_scale = 0.25
 
-        # 3.8. Mask indices for joints: RLWalk masked out [
+        # Mask indices for joints: RLWalk masked out [
         #    'neck_pitch', 'head_pitch', 'head_yaw', 'head_roll', 'left_antenna', 'right_antenna'
         # ]
         mask_joints = ['neck_pitch', 'head_pitch', 'head_yaw', 'head_roll',
                        'left_antenna', 'right_antenna']
         self.mask_joint_idx = np.array([self.joint_names_16.index(j) for j in mask_joints], dtype=np.int32)
 
-        # Note: those indices are in the 16-element space; when action is length 14,
-        # we need to map them to the 14 DOF indices. But RLWalk’s ONNX expects a 14-length action vector
-        # already zeroed out at those positions. In the RLWalk training, they used a 16-length joint list
-        # but zeroed mask indices before computing motor_targets. Here the ONNX expects exactly length 14,
-        # so mask_joint_idx must be converted to indices within the 14-vector space.
-        # Actually, RLWalk’s action vector is length 14 (since it ignores antenna joints entirely).
-        # Therefore, mask_joint_idx should be indices within [0..13] corresponding to the 14 dof_indices.
-        # Let’s compute: for each joint in mask_joints that is in dof_indices, get its index within dof_indices.
-
+        # Convert mask indices to the 14-vector space
         dof_mask_idx = []
         for joint in mask_joints:
             full_idx = self.joint_names_16.index(joint)
             if full_idx in self.dof_indices:
                 dof_mask_idx.append(self.dof_indices.index(full_idx))
-        self.dof_mask_idx = np.array(dof_mask_idx, dtype=np.int32)  # indices in [0..13]
-
-        # --- 4. Placeholders & timestamps ---
+        self.dof_mask_idx = np.array(dof_mask_idx, dtype=np.int32)
 
         # Raw IMU data (each length 3)
         self.raw_gyro = None
@@ -147,8 +150,7 @@ class WalkPolicyInferenceNode(Node):
         # For logging missing inputs
         self.last_rate_log_time = time.time()
 
-        # --- 5. Publishers & Subscribers ---
-
+        # Publishers & Subscribers
         self.target_joint_states_pub = self.create_publisher(
             JointState, '/target_joint_states', 1
         )
@@ -174,15 +176,32 @@ class WalkPolicyInferenceNode(Node):
             Float32, '/phase_frequency_factor', 1
         )
 
-        # --- 6. save_obs parameter (defaults to False) ---
+        # save_obs parameter (defaults to False)
         self.declare_parameter('save_obs', False)
         self.save_obs = self.get_parameter('save_obs').get_parameter_value().bool_value
         self.saved_obs = [] if self.save_obs else None
 
+        # Initialize HWI gains and optional filter
+        kps = [float(self.pid_p)] * 14
+        kps[5:9] = [8.0, 8.0, 8.0, 8.0]
+        kds = [float(self.pid_d)] * 14
+
+        self.hwi.set_kps(kps)
+        self.hwi.set_kds(kds)
+        self.hwi.turn_on()
+        time.sleep(2.0)
+        self.start_time = time.time()
+
+        self.control_freq = 50.0  # Hz
+        if self.cutoff_frequency > 0.0:
+            self.action_filter = LowPassActionFilter(self.control_freq, self.cutoff_frequency)
+        else:
+            self.action_filter = None
+
         self.get_logger().info("Walk Policy Inference Node initialized.")
 
-        # --- 7. Create 50 Hz timer to run inference ---
-        self.timer = self.create_timer(1.0 / 50.0, self.timer_callback)
+        # Create 50 Hz timer to run inference
+        self.timer = self.create_timer(1.0 / self.control_freq, self.timer_callback)
         self.started = False
 
     def imu_callback(self, msg: Imu):
@@ -206,7 +225,7 @@ class WalkPolicyInferenceNode(Node):
         self.cmds[2] = msg.angular.z
         # cmds[3:7] remain as head commands (set externally if desired)
 
-        # --- Update phase_frequency_factor exactly like RLWalk.get_phase_frequency_factor() ---
+        # Update phase_frequency_factor exactly like RLWalk.get_phase_frequency_factor()
         x_vel = self.cmds[0]
         if abs(x_vel) < 1e-3:
             # If command is (essentially) zero, freeze phase (no walking)
@@ -252,10 +271,10 @@ class WalkPolicyInferenceNode(Node):
           • Update imitation_phase (2 floats)
           • Build obs (101 floats) in RLWalk order (and optionally save it)
           • Run ONNX inference, apply mask, update action history
-          • Compute motor_targets (14 floats), then merge head commands
+          • Compute motor_targets (14 floats), then apply filter, merge head commands
           • Publish /target_joint_states with those 14 joints
         """
-        # --- 7.1. Startup check ---
+        # Startup check
         if not self.started:
             missing = []
             if (self.raw_gyro is None) or (self.raw_accelero is None):
@@ -281,15 +300,16 @@ class WalkPolicyInferenceNode(Node):
 
             self.get_logger().info("All sensor data received. Starting policy execution.")
             self.started = True
+            self.start_time = time.time()
             return
 
-        # --- 7.2. After startup: compute fresh DOF pos/vel from joint_states buffer ---
+        # Compute fresh DOF pos/vel from joint_states buffer
         dof_pos14 = self.joint_positions_16[self.dof_indices]
         dof_vel14 = self.joint_velocities_16[self.dof_indices]
         self.dof_pos_minus_init = dof_pos14 - self.init_pos
         self.dof_vel_scaled = dof_vel14 * self.joint_vel_scale
 
-        # --- 7.3. Update imitation phase (2 floats) ---
+        # Update imitation phase (2 floats)
         self.imitation_i = (
             self.imitation_i
             + 1 * (self.phase_frequency_factor + self.phase_frequency_factor_offset)
@@ -299,47 +319,55 @@ class WalkPolicyInferenceNode(Node):
             np.sin(self.imitation_i / self.PRM.nb_steps_in_period * 2 * np.pi),
         ], dtype=np.float32)
 
-        # --- 7.4. Build 1×101 observation vector in exact RLWalk order ---
+        # Build 1×101 observation vector in exact RLWalk order
         obs = np.concatenate([
-            self.raw_gyro,                #  3
-            self.raw_accelero,            #  3
-            self.cmds,                    #  7
+            self.raw_gyro,                # 3
+            self.raw_accelero,            # 3
+            self.cmds,                    # 7
             self.dof_pos_minus_init,      # 14
             self.dof_vel_scaled,          # 14
             self.last_action,             # 14
             self.last_last_action,        # 14
             self.last_last_last_action,   # 14
             self.motor_targets,           # 14
-            self.feet_contacts,           #  2
-            self.imitation_phase          #  2
+            self.feet_contacts,           # 2
+            self.imitation_phase          # 2
         ], dtype=np.float32)               # total = 101
 
-        # --- 7.5. Optionally save this observation ---
+        # Optionally save this observation
         if self.save_obs:
             self.saved_obs.append(obs.copy())
 
-        # --- 7.6. Run ONNX inference ---
+        # Run ONNX inference
         output = self.model.run(None, {'obs': obs.reshape(1, -1)})
         action = output[0].flatten()  # length 14
 
-        # --- 7.7. Mask out head/antenna indices (within 14-vector) ---
+        # Mask out head/antenna indices (within 14-vector)
         action[self.dof_mask_idx] = 0.0
 
-        # --- 7.8. Update action history ---
+        # Update action history
         self.last_last_last_action = self.last_last_action.copy()
         self.last_last_action = self.last_action.copy()
         self.last_action = action.copy()
 
-        # --- 7.9. Compute new motor_targets (14 floats) ---
+        # Compute new motor_targets (14 floats)
         self.motor_targets = self.init_pos + action * self.action_scale
 
-        # --- Merge head commands exactly like RLWalk ---
+        # Apply LowPassActionFilter if enabled
+        if self.action_filter is not None:
+            self.action_filter.push(self.motor_targets)
+            filtered_motor_targets = self.action_filter.get_filtered_action()
+            # Only apply filter after 1s has elapsed since starting
+            if (time.time() - self.start_time) > 1.0:
+                self.motor_targets = filtered_motor_targets
+
+        # Merge head commands exactly like RLWalk
         # RLWalk did: head_motor_targets = last_commands[3:] + motor_targets[5:9]
         # and then: motor_targets[5:9] = head_motor_targets
         head_cmds = self.cmds[3:7]  # [head_pan, head_tilt, head_roll, head_yaw]
         self.motor_targets[5:9] = head_cmds + self.motor_targets[5:9]
 
-        # --- 7.10. Publish the 14-joint targets on /target_joint_states ---
+        # Publish the 14-joint targets on /target_joint_states
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
         published_names = [self.joint_names_16[i] for i in self.dof_indices]
@@ -348,11 +376,12 @@ class WalkPolicyInferenceNode(Node):
         self.target_joint_states_pub.publish(msg)
 
     def destroy_node(self):
-        # No hardware to turn off here; JointStatePublisher handles HWI commands.
+        # Ensure the hardware is turned off on exit
+        self.hwi.turn_off()
         super().destroy_node()
         self.get_logger().info('Shutting down walk_policy_inference_node')
 
-        # --- 8. If save_obs was enabled, dump saved_obs to disk ---
+        # If save_obs was enabled, dump saved_obs to disk
         if self.save_obs and (self.saved_obs is not None):
             try:
                 import pickle
