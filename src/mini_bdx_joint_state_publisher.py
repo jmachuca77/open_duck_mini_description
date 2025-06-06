@@ -7,37 +7,58 @@ from sensor_msgs.msg import JointState
 from mini_bdx_runtime.rustypot_position_hwi import HWI
 from mini_bdx_runtime.duck_config import DuckConfig
 
+
 class JointStatePublisher(Node):
     def __init__(self):
         super().__init__('mini_bdx_joint_state_publisher')
 
-        # parameters
+        # declare parameters
         self.declare_parameter('publish_rate', 100.0)
         self.declare_parameter('duck_config_file', '')
+
+        # PID gains (default P=30, I=0, D=0)
+        self.declare_parameter('pid_p', 32)
+        self.declare_parameter('pid_i', 0)
+        self.declare_parameter('pid_d', 0)
 
         rate = self.get_parameter('publish_rate').get_parameter_value().double_value
         cfg_file = self.get_parameter('duck_config_file').get_parameter_value().string_value or None
 
-
+        # retrieve PID values
+        pid_p = self.get_parameter('pid_p').get_parameter_value().integer_value
+        pid_i = self.get_parameter('pid_i').get_parameter_value().integer_value
+        pid_d = self.get_parameter('pid_d').get_parameter_value().integer_value
 
         # instantiate HWI
         duck_cfg = DuckConfig(cfg_file) if cfg_file else DuckConfig()
         self.hwi = HWI(duck_cfg)
 
-        self.dummy_joints = ["left_antenna", "right_antenna"]  # Dummy joints for urdf viz. Not controlled by hardware.
+        # build Kp and Kd lists for all 14 DOFs
+        kps = [float(pid_p)] * 14
+        # lower head Kp on indices 5..8
+        kps[5:9] = [8.0, 8.0, 8.0, 8.0]
+        kds = [float(pid_d)] * 14
+
+        # send gains to HWI and turn on hardware
+        self.hwi.set_kps(kps)
+        self.hwi.set_kds(kds)
+
+        self.dummy_joints = ["left_antenna", "right_antenna"]  # Dummy joints for URDF viz
         self.dummy_joint_values = [0.0, 0.0]
         self.dummy_joint_insert_idx = 9
+
         joint_names = list(self.hwi.joints.keys())
         joint_names[self.dummy_joint_insert_idx:self.dummy_joint_insert_idx] = self.dummy_joints
         self.joint_names = joint_names
 
-        self.hwi.turn_on()
+
         # Initialize target_positions as a dict { joint_name: init_position }
         self.target_positions = {name: self.hwi.init_pos[name] for name in self.hwi.joints.keys()}
         # Also ensure dummy joints are in the dict:
         # self.target_positions["left_antenna"] = 0.0
         # self.target_positions["right_antenna"] = 0.0
 
+        self.hwi.turn_on()
         # publisher & timer
         self.pub = self.create_publisher(JointState, 'joint_states', 10)
 
@@ -62,20 +83,17 @@ class JointStatePublisher(Node):
             if name in self.target_positions:
                 self.target_positions[name] = pos
             else:
-                self.get_logger().warn("Received target for unknown joint: %s", name)
-
-        # store latest target positions as a dict {name: position}
-        # self.target_positions = dict(zip(msg.name, msg.position))
+                self.get_logger().warn(f"Received target for unknown joint: {name}")
 
     def update_callback(self):
-        # 1) Send target positions to HWI, if available
+        # Send target positions to HWI, if available
         if self.target_positions:
             try:
                 self.hwi.set_position_all(self.target_positions)
             except Exception as e:
                 self.get_logger().warn(f'Failed to send targets: {e}')
 
-        # 2) Read present positions & velocities
+        # Read present positions & velocities
         positions = self.hwi.get_present_positions()
         velocities = self.hwi.get_present_velocities()
 
@@ -83,7 +101,7 @@ class JointStatePublisher(Node):
             self.get_logger().warn('HWI read failure, skipping publish')
             return
 
-        # 3) Publish actual joint states
+        # Publish actual joint states
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
 
@@ -104,7 +122,7 @@ class JointStatePublisher(Node):
         self.hwi.turn_off()
         super().destroy_node()
         self.get_logger().info('Shutting down joint_state_publisher_node')
-        # any cleanup your HWI needs can go here
+
 
 def main(args=None):
     rclpy.init(args=args)

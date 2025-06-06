@@ -36,12 +36,18 @@ def generate_launch_description():
         default_value='true',
         description='Enable Foxglove WebSocket Bridge'
     )
+    declare_save_obs = DeclareLaunchArgument(
+        'save_obs',
+        default_value='false',
+        description='Whether to save observations in the walk policy node'
+    )
 
     # Read configurations
     use_hw_jsp = LaunchConfiguration('use_hw_jsp')
     enable_rviz = LaunchConfiguration('enable_rviz')
     enable_jsp_gui = LaunchConfiguration('enable_jsp_gui')
     enable_foxglove_bridge = LaunchConfiguration('enable_foxglove_bridge')
+    save_obs = LaunchConfiguration('save_obs')
 
     # Load URDF
     pkg_share = get_package_share_directory('open_duck_mini_description')
@@ -98,12 +104,13 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Walk Policy Inference Node (always)
+    # Walk Policy Inference Node (always), with save_obs parameter
     walk_policy = Node(
         package='open_duck_mini_description',
         executable='walk_policy_inference_node.py',
         name='walk_policy_inference_node',
-        output='screen'
+        output='screen',
+        parameters=[{'save_obs': save_obs}]
     )
 
     # Joint State Publisher GUI (optional)
@@ -136,7 +143,7 @@ def generate_launch_description():
 
     # Teleop Twist Joy Launch (PS5 config via config_filepath)
     ps5_config_file = os.path.join(
-        get_package_share_directory('open_duck_mini_description'),
+        pkg_share,
         'config',
         'ps5.config.yaml'
     )
@@ -154,6 +161,7 @@ def generate_launch_description():
         declare_enable_rviz,
         declare_enable_jsp_gui,
         declare_enable_foxglove_bridge,
+        declare_save_obs,
         jsp,
         rsp,
         hw_jsp,

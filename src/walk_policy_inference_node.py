@@ -40,7 +40,6 @@ class WalkPolicyInferenceNode(Node):
         # Instantiate HWI & DuckConfig to get joint ordering and init_pos
         duck_cfg = DuckConfig()  # loads default ~/duck_config.json if present
         self.hwi = HWI(duck_cfg)
-        # We will call turn_on() later after setting PID gains.
 
         # Get the 14 hardware joints from HWI (dictionary keys are ordered)
         hw_joint_names = list(self.hwi.joints.keys())  # e.g. ["left_hip_yaw", "left_hip_roll", ...] (14 names)
@@ -50,11 +49,9 @@ class WalkPolicyInferenceNode(Node):
         self.dummy_insert_idx = 9
         joint_names_16 = hw_joint_names.copy()
         joint_names_16[self.dummy_insert_idx:self.dummy_insert_idx] = self.dummy_joints
-        # Now joint_names_16 is length 16.
-
         self.joint_names_16 = joint_names_16
 
-        # Identify antenna indices and DOF indices
+        # Determine DOF indices (exclude antennas)
         self.antenna_indices = [
             self.joint_names_16.index("left_antenna"),
             self.joint_names_16.index("right_antenna")
@@ -74,16 +71,8 @@ class WalkPolicyInferenceNode(Node):
         # Extract 14-length init_pos (drop antenna entries)
         self.init_pos = self.init_pos16[self.dof_indices]
 
-        # Declare PID and cutoff parameters (default to RLWalk's defaults)
-        self.declare_parameter('pid_p', 30)
-        self.declare_parameter('pid_i', 0)
-        self.declare_parameter('pid_d', 0)
-        self.declare_parameter('cutoff_frequency', 0.0)
-
-        # Retrieve PID values
-        self.pid_p = self.get_parameter('pid_p').get_parameter_value().integer_value
-        self.pid_i = self.get_parameter('pid_i').get_parameter_value().integer_value
-        self.pid_d = self.get_parameter('pid_d').get_parameter_value().integer_value
+        # Declare cutoff parameter (default=0 → no filter)
+        self.declare_parameter('cutoff_frequency', 40.0)
 
         # Retrieve cutoff frequency; if <= 0, we disable filtering
         self.cutoff_frequency = self.get_parameter('cutoff_frequency').get_parameter_value().double_value
@@ -106,9 +95,8 @@ class WalkPolicyInferenceNode(Node):
         # Feet-contacts placeholder (2 floats)
         self.feet_contacts = None
 
-        # Imitation-phase logic
-        prm_path = os.path.join(get_package_share_directory('open_duck_mini_description'),
-                                 'config/polynomial_coefficients.pkl')
+        # Imitation phase variables
+        prm_path = os.path.join(pkg_share, 'config/polynomial_coefficients.pkl')
         self.PRM = PolyReferenceMotion(prm_path)
         self.imitation_i = 0.0
         self.imitation_phase = np.zeros(2, dtype=np.float32)
@@ -181,17 +169,7 @@ class WalkPolicyInferenceNode(Node):
         self.save_obs = self.get_parameter('save_obs').get_parameter_value().bool_value
         self.saved_obs = [] if self.save_obs else None
 
-        # Initialize HWI gains and optional filter
-        kps = [float(self.pid_p)] * 14
-        kps[5:9] = [8.0, 8.0, 8.0, 8.0]
-        kds = [float(self.pid_d)] * 14
-
-        self.hwi.set_kps(kps)
-        self.hwi.set_kds(kds)
-        self.hwi.turn_on()
-        time.sleep(2.0)
-        self.start_time = time.time()
-
+        # Optional low-pass filter
         self.control_freq = 50.0  # Hz
         if self.cutoff_frequency > 0.0:
             self.action_filter = LowPassActionFilter(self.control_freq, self.cutoff_frequency)
@@ -200,7 +178,7 @@ class WalkPolicyInferenceNode(Node):
 
         self.get_logger().info("Walk Policy Inference Node initialized.")
 
-        # Create 50 Hz timer to run inference
+        # Create timer for main loop using the control frequency
         self.timer = self.create_timer(1.0 / self.control_freq, self.timer_callback)
         self.started = False
 
@@ -376,8 +354,6 @@ class WalkPolicyInferenceNode(Node):
         self.target_joint_states_pub.publish(msg)
 
     def destroy_node(self):
-        # Ensure the hardware is turned off on exit
-        self.hwi.turn_off()
         super().destroy_node()
         self.get_logger().info('Shutting down walk_policy_inference_node')
 
