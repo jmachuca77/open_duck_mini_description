@@ -8,6 +8,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import LaunchConfiguration
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 from launch_ros.actions import Node
@@ -75,7 +76,6 @@ def generate_launch_description():
         condition=IfCondition(use_hw_jsp)
     )
 
-
     # BNO055 IMU node
     bno_config = os.path.join(
         get_package_share_directory('open_duck_mini_description'),
@@ -134,6 +134,21 @@ def generate_launch_description():
         condition=IfCondition(enable_foxglove_bridge)
     )
 
+    # Teleop Twist Joy Launch (PS5 config via config_filepath)
+    ps5_config_file = os.path.join(
+        get_package_share_directory('open_duck_mini_description'),
+        'config',
+        'ps5.config.yaml'
+    )
+    teleop_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_directory('teleop_twist_joy'),
+            'launch',
+            'teleop-launch.py'
+        )),
+        launch_arguments={'config_filepath': ps5_config_file}.items()
+    )
+
     return LaunchDescription([
         declare_use_hw_jsp,
         declare_enable_rviz,
@@ -144,8 +159,9 @@ def generate_launch_description():
         hw_jsp,
         bno_node,
         feet_switch,
+        walk_policy,
         jsp_gui,
         rviz,
         foxglove_bridge,
-        walk_policy
+        teleop_launch
     ])
