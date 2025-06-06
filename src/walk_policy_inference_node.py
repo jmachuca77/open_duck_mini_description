@@ -167,9 +167,14 @@ class WalkPolicyInferenceNode(Node):
             JointState, '/joint_states', self.joint_states_callback, 1
         )
 
+        # --- 6. save_obs parameter (defaults to False) ---
+        self.declare_parameter('save_obs', False)
+        self.save_obs = self.get_parameter('save_obs').get_parameter_value().bool_value
+        self.saved_obs = [] if self.save_obs else None
+
         self.get_logger().info("Walk Policy Inference Node initialized.")
 
-        # --- 6. Create 50 Hz timer to run inference ---
+        # --- 7. Create 50 Hz timer to run inference ---
         self.timer = self.create_timer(1.0 / 50.0, self.timer_callback)
         self.started = False
 
@@ -198,7 +203,9 @@ class WalkPolicyInferenceNode(Node):
         x_vel = self.cmds[0]
         max_phase_frequency = 1.2
         min_phase_frequency = 1.0
-        freq = min_phase_frequency + (abs(x_vel) / 0.15) * (max_phase_frequency - min_phase_frequency)
+        freq = min_phase_frequency + (abs(x_vel) / 0.15) * (
+            max_phase_frequency - min_phase_frequency
+        )
         # Clamp between [min_phase_frequency, max_phase_frequency]
         self.phase_frequency_factor = float(np.clip(freq, min_phase_frequency, max_phase_frequency))
 
@@ -229,12 +236,12 @@ class WalkPolicyInferenceNode(Node):
           • Read fresh joint_states (we have them from callback)
           • Compute dof_pos_minus_init (14 floats) and dof_vel_scaled (14 floats)
           • Update imitation_phase (2 floats)
-          • Build obs (101 floats) in RLWalk order
+          • Build obs (101 floats) in RLWalk order (and optionally save it)
           • Run ONNX inference, apply mask, update action history
           • Compute motor_targets (14 floats), then merge head commands
           • Publish /target_joint_states with those 14 joints
         """
-        # --- 6.1. Startup check ---
+        # --- 7.1. Startup check ---
         if not self.started:
             missing = []
             if (self.raw_gyro is None) or (self.raw_accelero is None):
@@ -262,13 +269,13 @@ class WalkPolicyInferenceNode(Node):
             self.started = True
             return
 
-        # --- 6.2. After startup: compute fresh DOF pos/vel from joint_states buffer ---
+        # --- 7.2. After startup: compute fresh DOF pos/vel from joint_states buffer ---
         dof_pos14 = self.joint_positions_16[self.dof_indices]
         dof_vel14 = self.joint_velocities_16[self.dof_indices]
         self.dof_pos_minus_init = dof_pos14 - self.init_pos
         self.dof_vel_scaled = dof_vel14 * self.joint_vel_scale
 
-        # --- 6.3. Update imitation phase (2 floats) ---
+        # --- 7.3. Update imitation phase (2 floats) ---
         self.imitation_i = (
             self.imitation_i
             + 1 * (self.phase_frequency_factor + self.phase_frequency_factor_offset)
@@ -278,7 +285,7 @@ class WalkPolicyInferenceNode(Node):
             np.sin(self.imitation_i / self.PRM.nb_steps_in_period * 2 * np.pi),
         ], dtype=np.float32)
 
-        # --- 6.4. Build 1×101 observation vector in exact RLWalk order ---
+        # --- 7.4. Build 1×101 observation vector in exact RLWalk order ---
         obs = np.concatenate([
             self.raw_gyro,                #  3
             self.raw_accelero,            #  3
@@ -293,19 +300,23 @@ class WalkPolicyInferenceNode(Node):
             self.imitation_phase          #  2
         ], dtype=np.float32)               # total = 101
 
-        # --- 6.5. Run ONNX inference ---
+        # --- 7.5. Optionally save this observation ---
+        if self.save_obs:
+            self.saved_obs.append(obs.copy())
+
+        # --- 7.6. Run ONNX inference ---
         output = self.model.run(None, {'obs': obs.reshape(1, -1)})
         action = output[0].flatten()  # length 14
 
-        # --- 6.6. Mask out head/antenna indices (within 14-vector) ---
+        # --- 7.7. Mask out head/antenna indices (within 14-vector) ---
         action[self.dof_mask_idx] = 0.0
 
-        # --- 6.7. Update action history ---
+        # --- 7.8. Update action history ---
         self.last_last_last_action = self.last_last_action.copy()
         self.last_last_action = self.last_action.copy()
         self.last_action = action.copy()
 
-        # --- 6.8. Compute new motor_targets (14 floats) ---
+        # --- 7.9. Compute new motor_targets (14 floats) ---
         self.motor_targets = self.init_pos + action * self.action_scale
 
         # --- Merge head commands exactly like RLWalk ---
@@ -314,7 +325,7 @@ class WalkPolicyInferenceNode(Node):
         head_cmds = self.cmds[3:7]  # [head_pan, head_tilt, head_roll, head_yaw]
         self.motor_targets[5:9] = head_cmds + self.motor_targets[5:9]
 
-        # --- 6.9. Publish the 14-joint targets on /target_joint_states ---
+        # --- 7.10. Publish the 14-joint targets on /target_joint_states ---
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
         published_names = [self.joint_names_16[i] for i in self.dof_indices]
@@ -326,6 +337,16 @@ class WalkPolicyInferenceNode(Node):
         # No hardware to turn off here; JointStatePublisher handles HWI commands.
         super().destroy_node()
         self.get_logger().info('Shutting down walk_policy_inference_node')
+
+        # --- 8. If save_obs was enabled, dump saved_obs to disk ---
+        if self.save_obs and (self.saved_obs is not None):
+            try:
+                import pickle
+                with open('ros_saved_obs.pkl', 'wb') as f:
+                    pickle.dump(self.saved_obs, f)
+                self.get_logger().info(f"Saved {len(self.saved_obs)} observations to ros_saved_obs.pkl")
+            except Exception as e:
+                self.get_logger().error(f"Failed to save observations: {e}")
 
 
 def main(args=None):
